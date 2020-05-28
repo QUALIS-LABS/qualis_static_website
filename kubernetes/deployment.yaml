@@ -1,19 +1,19 @@
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
-  name: "qualis_static_website"
+  name: "qualis-static-website"
   namespace: "qualis"
   labels:
-    app: "qualis_static_website"
+    app: "qualis-static-website"
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: "qualis_static_website"
+      app: "qualis-static-website"
   template:
     metadata:
       labels:
-        app: "qualis_static_website"
+        app: "qualis-static-website"
     spec:
       containers:
       - name: "qualis-static-website"

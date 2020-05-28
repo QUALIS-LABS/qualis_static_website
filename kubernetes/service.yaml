@@ -1,16 +1,16 @@
 apiVersion: "v1"
 kind: "Service"
 metadata:
-  name: "qualis_static_website"
+  name: "qualis-static-website"
   namespace: "qualis"
   labels:
-    app: "qualis_static_website"
+    app: "qualis-static-website"
 spec:
   ports:
   - protocol: "TCP"
     port: 9011
     targetPort: 80
   selector:
-    app: "qualis_static_website"
+    app: "qualis-static-website"
   type: "LoadBalancer"
   loadBalancerIP: ""
