@@ -16,7 +16,7 @@ spec:
         app: "qualis_static_website"
     spec:
       containers:
-      - name: "qualis_static_website"
+      - name: "qualis-static-website"
         image: LATEST_IMAGE_TAG
         ports:
           - containerPort: 80
