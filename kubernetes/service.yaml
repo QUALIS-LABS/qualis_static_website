@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
   - protocol: "TCP"
-    port: 9011
+    port: 2000
     targetPort: 80
   selector:
     app: "qualis-static-website"
