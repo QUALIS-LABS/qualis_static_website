@@ -60,9 +60,10 @@ steps:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=personal-projects'
  
- # Deploy container image to Cloud Run
- - name: 'gcr.io/cloud-builders/gcloud'
-   args:
+# Deploy container image to Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: Deploying to cloud run
+  args:
    - 'run'
    - 'deploy'
    - 'qualisstaticwebsite'
@@ -72,5 +73,5 @@ steps:
    - 'us-central1'
    - '--platform'
    - 'managed'
- images:
- - 'gcr.io/$PROJECT_ID/qualis_static_website:latest'
+images:
+  - 'gcr.io/$PROJECT_ID/qualis_static_website:latest'
