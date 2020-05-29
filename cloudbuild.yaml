@@ -59,3 +59,18 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=personal-projects'
+ 
+ # Deploy container image to Cloud Run
+ - name: 'gcr.io/cloud-builders/gcloud'
+   args:
+   - 'run'
+   - 'deploy'
+   - 'qualisstaticwebsite'
+   - '--image'
+   - 'gcr.io/$PROJECT_ID/qualis_static_website:latest'
+   - '--region'
+   - 'us-central1'
+   - '--platform'
+   - 'managed'
+ images:
+ - 'gcr.io/$PROJECT_ID/qualis_static_website:latest'
